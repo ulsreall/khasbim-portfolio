@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C63FF"/>
+      <stop offset="100%" style="stop-color:#5A52D5"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Decorative dots -->
+  <circle cx="100" cy="50" r="4" fill="#6C63FF" opacity="0.5"/>
+  <circle cx="350" cy="50" r="4" fill="#6C63FF" opacity="0.5"/>
+  <circle cx="600" cy="50" r="4" fill="#6C63FF" opacity="0.5"/>
+  <circle cx="850" cy="50" r="4" fill="#6C63FF" opacity="0.5"/>
+  <circle cx="1100" cy="50" r="4" fill="#6C63FF" opacity="0.5"/>
+  
+  <!-- Profile circle -->
+  <circle cx="180" cy="300" r="100" fill="#1a1a2e" stroke="#6C63FF" stroke-width="3"/>
+  <text x="180" y="340" text-anchor="middle" fill="#6C63FF" font-family="Arial, sans-serif" font-weight="bold" font-size="80">K</text>
+  
+  <!-- Name -->
+  <text x="320" y="240" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="48">Khasbi Maulana</text>
+  
+  <!-- Title -->
+  <text x="320" y="290" fill="#8b949e" font-family="Arial, sans-serif" font-size="28">Web3 Builder · AI Agent Architect · Security Researcher</text>
+  
+  <!-- Separator -->
+  <line x1="320" y1="320" x2="900" y2="320" stroke="#6C63FF" stroke-width="2"/>
+  
+  <!-- Tech stack -->
+  <text x="320" y="360" fill="#c9d1d9" font-family="Arial, sans-serif" font-size="22">Python · TypeScript · Rust · Go · Solidity · CUDA</text>
+  
+  <!-- Website -->
+  <text x="320" y="420" fill="#6C63FF" font-family="Arial, sans-serif" font-weight="bold" font-size="28">khasbim.web.id</text>
+  
+  <!-- Decorative dots row -->
+  <circle cx="320" cy="480" r="4" fill="#6C63FF"/>
+  <circle cx="380" cy="480" r="4" fill="#6C63FF"/>
+  <circle cx="440" cy="480" r="4" fill="#6C63FF"/>
+  <circle cx="500" cy="480" r="4" fill="#6C63FF"/>
+  <circle cx="560" cy="480" r="4" fill="#6C63FF"/>
+  <circle cx="620" cy="480" r="4" fill="#6C63FF"/>
+  <circle cx="680" cy="480" r="4" fill="#6C63FF"/>
+  <circle cx="740" cy="480" r="4" fill="#6C63FF"/>
+  <circle cx="800" cy="480" r="4" fill="#6C63FF"/>
+  <circle cx="860" cy="480" r="4" fill="#6C63FF"/>
+  
+  <!-- Bottom bar -->
+  <rect x="0" y="626" width="1200" height="4" fill="url(#purple)"/>
+</svg>
