@@ -243,7 +243,7 @@ h1 em {
 .section-title span, .terminal-label, .project-type, .timeline-date { font-family: var(--mono); font-weight: 700; color: var(--accent); font-size: 12px; letter-spacing: .08em; }
 h2 { font-size: clamp(34px, 5vw, 60px); line-height: 1; margin: 0; letter-spacing: -.055em; font-weight: 800; }
 .about-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 22px; }
-.card-shadow { border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); border-radius: var(--radius); backdrop-filter: blur(18px); }
+.card-shadow { border: 1px solid var(--line); background: var(--paper); box-shadow: var(--shadow); border-radius: var(--radius); }
 .about-copy { padding: 28px; font-size: 16px; line-height: 1.78; color: #d5deeb; }
 .about-copy p:first-child { font-size: 21px; font-weight: 700; color: var(--ink); letter-spacing: -.025em; }
 .stats-card { padding: 22px; display: grid; gap: 14px; }
@@ -638,4 +638,31 @@ mark {
 
 [data-theme="light"] .skill-bar-track {
   background: rgba(0,0,0,.08);
+}
+
+/* Performance optimizations */
+.content-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+.project-image img,
+.github-chart-img {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 200px;
+}
+.fade-in {
+  will-change: opacity, transform;
+}
+.loader-spinner {
+  will-change: transform;
+}
+.marquee-track {
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .typing-cursor { animation: none; }
+  .marquee-track { animation: none; }
+  .loader-spinner { animation: none; }
+  .skill-bar-fill { transition: none; }
 }
