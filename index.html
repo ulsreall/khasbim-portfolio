@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,8 +21,40 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <!-- Vercel Analytics -->
+  <script defer src="https://cdn.vercel-analytics.com/v1/script.js"></script>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Khasbi Maulana",
+    "url": "https://www.khasbim.web.id",
+    "image": "https://www.khasbim.web.id/assets/profile.png",
+    "jobTitle": "Web3 Builder & AI Agent Architect",
+    "description": "Building multi-agent AI platforms, smart contract security tools, and onchain DApps.",
+    "sameAs": [
+      "https://github.com/ulsreall",
+      "https://x.com/itseywacc",
+      "https://t.me/mancingdao"
+    ],
+    "knowsAbout": ["Web3", "Blockchain", "AI", "Multi-Agent Systems", "Smart Contracts", "DeFi", "Security Research"],
+    "email": "khasbimln@gmail.com"
+  }
+  </script>
 </head>
 <body>
+  <!-- Loading Screen -->
+  <div id="loader" class="loader-screen">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <p class="loader-text">KHASBI.M</p>
+    </div>
+  </div>
+
   <div class="cursor-grid" aria-hidden="true"></div>
 
   <header class="site-header">
@@ -32,13 +64,17 @@
       <div class="nav-links">
         <a href="#about">ABOUT</a><span>|</span>
         <a href="#projects">WORK</a><span>|</span>
+        <a href="#blog">BLOG</a><span>|</span>
         <a href="#onchain">ON-CHAIN</a><span>|</span>
         <a href="#community">COMMUNITY</a><span>|</span>
         <a href="#skills">SKILLS</a><span>|</span>
         <a href="#exploring">EXPLORING</a><span>|</span>
         <a href="#contact">CONTACT</a>
       </div>
-      <button class="sound-button" type="button" title="Toggle click sound" aria-label="Toggle sound">♪</button>
+      <div class="nav-controls">
+        <button class="theme-toggle" type="button" title="Toggle light/dark theme" aria-label="Toggle theme">◐</button>
+        <button class="sound-button" type="button" title="Toggle click sound" aria-label="Toggle sound">♪</button>
+      </div>
     </nav>
   </header>
 
@@ -53,7 +89,7 @@
     <section class="hero container section-panel">
       <div class="code-comment">
         <p>// portfolio.tsx</p>
-        <p>// version: 2.0.0</p>
+        <p>// version: 2.1.0</p>
         <p>// status: shipping</p>
         <p>// focus: web3 + ai + security</p>
       </div>
@@ -107,12 +143,12 @@
         <h2>About me.</h2>
       </div>
       <div class="about-grid">
-        <div class="about-copy card-shadow">
+        <div class="about-copy card-shadow fade-in">
           <p>I build multi-agent AI platforms, smart contract security tools, and onchain DApps. Currently focused on shipping real Web3 products and exploring DeFi systems.</p>
           <p>Background in Computer and Network Engineering. I work across the stack — Python for AI/ML pipelines, TypeScript/React for frontends, Rust/Go for performance-critical tools, and Solidity for smart contracts.</p>
           <p>Also running Mancing DAO, a Web3 community focused on airdrop farming, testnet participation, and ecosystem updates. Active contributor to open-source projects and hackathon submissions.</p>
         </div>
-        <aside class="stats-card card-shadow">
+        <aside class="stats-card card-shadow fade-in">
           <div><strong>40+</strong><span>Built Projects</span></div>
           <div><strong>Web3</strong><span>DeFi / AI / Security</span></div>
           <div><strong>Multi-Stack</strong><span>Python · TS · Rust · Go</span></div>
@@ -127,7 +163,7 @@
       </div>
       <div class="project-grid">
         <!-- AI / Multi-Agent -->
-        <article class="project-card card-shadow featured-project">
+        <article class="project-card card-shadow featured-project fade-in">
           <div class="project-image">
             <img src="assets/projects/spectre.png" alt="SPECTRE - Multi-Agent Platform" loading="lazy" />
           </div>
@@ -142,7 +178,7 @@
         </article>
 
         <!-- Security -->
-        <article class="project-card card-shadow featured-project">
+        <article class="project-card card-shadow featured-project fade-in">
           <div class="project-image">
             <img src="assets/projects/chainsentinel.png" alt="ChainSentinel - Smart Contract Security" loading="lazy" />
           </div>
@@ -157,7 +193,7 @@
         </article>
 
         <!-- Web3 DApp -->
-        <article class="project-card card-shadow featured-project">
+        <article class="project-card card-shadow featured-project fade-in">
           <div class="project-image">
             <img src="assets/projects/kindjar-celo.png" alt="KindJar - Celo Donation DApp" loading="lazy" />
           </div>
@@ -172,7 +208,7 @@
         </article>
 
         <!-- QIE Pay -->
-        <article class="project-card card-shadow featured-project">
+        <article class="project-card card-shadow featured-project fade-in">
           <div class="project-image">
             <img src="assets/projects/qiepay.png" alt="QIEPay" loading="lazy" />
           </div>
@@ -187,7 +223,7 @@
         </article>
 
         <!-- Farcaster -->
-        <article class="project-card card-shadow featured-project">
+        <article class="project-card card-shadow featured-project fade-in">
           <div class="project-image">
             <img src="assets/projects/base-streak-arena.png" alt="Base Streak Arena" loading="lazy" />
           </div>
@@ -202,7 +238,7 @@
         </article>
 
         <!-- Wallet Safety -->
-        <article class="project-card card-shadow featured-project">
+        <article class="project-card card-shadow featured-project fade-in">
           <div class="project-image">
             <img src="assets/projects/ayshata-guard.png" alt="Ayshata Guard" loading="lazy" />
           </div>
@@ -218,28 +254,65 @@
       </div>
     </section>
 
+    <!-- Blog Section -->
+    <section id="blog" class="container content-section">
+      <div class="section-title">
+        <span>BLOG[]</span>
+        <h2>Writing.</h2>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card card-shadow fade-in">
+          <div class="blog-meta">
+            <span class="blog-tag">Security</span>
+            <time>2026</time>
+          </div>
+          <h3>How AI Agents Are Changing Smart Contract Auditing</h3>
+          <p>Exploring how multi-agent AI pipelines can automate vulnerability detection in Solidity contracts — from static analysis to exploit simulation.</p>
+          <a href="https://github.com/ulsreall/chainsentinel" target="_blank" rel="noreferrer">Read on GitHub →</a>
+        </article>
+        <article class="blog-card card-shadow fade-in">
+          <div class="blog-meta">
+            <span class="blog-tag">Web3</span>
+            <time>2026</time>
+          </div>
+          <h3>Building a Decentralized Payment Gateway on QIE Blockchain</h3>
+          <p>Technical deep-dive into building QIEPay — escrow mechanics, merchant registration, and real-time payment analytics on QIE Testnet.</p>
+          <a href="https://github.com/ulsreall/qie-pay" target="_blank" rel="noreferrer">Read on GitHub →</a>
+        </article>
+        <article class="blog-card card-shadow fade-in">
+          <div class="blog-meta">
+            <span class="blog-tag">AI</span>
+            <time>2026</time>
+          </div>
+          <h3>Multi-Agent Orchestration: From SPECTRE to Production</h3>
+          <p>Lessons learned building 5 multi-agent platforms — architecture patterns, LLM pipeline design, and scaling agent coordination.</p>
+          <a href="https://github.com/ulsreall/spectre" target="_blank" rel="noreferrer">Read on GitHub →</a>
+        </article>
+      </div>
+    </section>
+
     <section id="onchain" class="container content-section">
       <div class="section-title">
         <span>ON_CHAIN_LOGS</span>
         <h2>On-chain Experience & Contributions.</h2>
       </div>
       <div class="timeline">
-        <article class="timeline-item card-shadow">
+        <article class="timeline-item card-shadow fade-in">
           <div class="timeline-date">MULTI-ECOSYSTEM · AIRDROPS · BRIDGING</div>
           <h3>Cross-chain & Layer 2 Ecosystems</h3>
           <p>Actively participated in multiple major Web3 ecosystems — LayerZero, Arbitrum, Base, Optimism, Celo, Solana, and Sui. Hands-on experience with airdrops, bridging, swaps, and on-chain interactions.</p>
         </article>
-        <article class="timeline-item card-shadow">
+        <article class="timeline-item card-shadow fade-in">
           <div class="timeline-date">SMART CONTRACTS · DEPLOYMENT</div>
           <h3>Smart Contract Development</h3>
           <p>Deployed and verified 9+ smart contracts on ARC Testnet. Experienced with ERC-20, ERC-721, and custom contract patterns. Built and tested DeFi protocols including swaps and token interactions.</p>
         </article>
-        <article class="timeline-item card-shadow">
+        <article class="timeline-item card-shadow fade-in">
           <div class="timeline-date">NODE_CONTRIBUTOR</div>
           <h3>Dymension & Avail</h3>
           <p>Operated as a node contributor in Dymension and Avail, contributing to network participation, testing, and ecosystem growth.</p>
         </article>
-        <article class="timeline-item card-shadow">
+        <article class="timeline-item card-shadow fade-in">
           <div class="timeline-date">HACKATHON · QIE BLOCKCHAIN</div>
           <h3>QIE Pay — Payment Gateway</h3>
           <p>Built a merchant payment gateway on QIE Blockchain with escrow, auto-settlement, and real-time analytics. QIE Hackathon submission.</p>
@@ -253,13 +326,13 @@
         <h2>Community.</h2>
       </div>
       <div class="timeline">
-        <article class="timeline-item card-shadow">
+        <article class="timeline-item card-shadow fade-in">
           <div class="timeline-date">TELEGRAM CHANNEL OWNER</div>
           <h3>Mancing DAO</h3>
           <p>Web3 community focused on airdrop farming, testnet participation, and ecosystem updates. Regular content on DeFi, security, and on-chain strategies.</p>
           <a href="https://t.me/mancingdao" target="_blank" rel="noreferrer">OPEN CHANNEL →</a>
         </article>
-        <article class="timeline-item card-shadow">
+        <article class="timeline-item card-shadow fade-in">
           <div class="timeline-date">TELEGRAM ADMIN</div>
           <h3>Community Home</h3>
           <p>Role: Community management, moderation, and user engagement.</p>
@@ -274,27 +347,27 @@
         <h2>Skills.</h2>
       </div>
       <div class="skills-grid">
-        <article class="skill-card card-shadow">
+        <article class="skill-card card-shadow fade-in">
           <h3>LANGUAGES</h3>
           <p>Python, TypeScript, JavaScript, Rust, Go, Solidity, CUDA, HTML/CSS</p>
         </article>
-        <article class="skill-card card-shadow">
+        <article class="skill-card card-shadow fade-in">
           <h3>WEB3</h3>
           <p>Smart Contracts, DeFi Protocols, Wallet Integration, Cross-chain, Airdrops, Mining</p>
         </article>
-        <article class="skill-card card-shadow">
+        <article class="skill-card card-shadow fade-in">
           <h3>AI / ML</h3>
           <p>Multi-Agent Systems, LLM Pipelines, MiMo, Automated Code Analysis</p>
         </article>
-        <article class="skill-card card-shadow">
+        <article class="skill-card card-shadow fade-in">
           <h3>SECURITY</h3>
           <p>Smart Contract Auditing, Vulnerability Detection, Threat Monitoring</p>
         </article>
-        <article class="skill-card card-shadow">
+        <article class="skill-card card-shadow fade-in">
           <h3>FRONTEND</h3>
           <p>React, Next.js, Tailwind, Farcaster Mini Apps, Responsive UI</p>
         </article>
-        <article class="skill-card card-shadow">
+        <article class="skill-card card-shadow fade-in">
           <h3>TOOLS</h3>
           <p>Git, GitHub, Docker, Linux, VPS, CI/CD, API Integration</p>
         </article>
@@ -352,6 +425,7 @@
       <div class="command-head"><strong>&gt;_ quick nav</strong><button type="button" class="close-command">ESC</button></div>
       <a href="#about">go /about</a>
       <a href="#projects">go /projects</a>
+      <a href="#blog">go /blog</a>
       <a href="#onchain">go /on-chain</a>
       <a href="#community">go /community</a>
       <a href="#skills">go /skills</a>

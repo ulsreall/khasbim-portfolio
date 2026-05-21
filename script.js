@@ -1,3 +1,10 @@
+// Loading screen
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  setTimeout(() => loader?.classList.add('hide'), 400);
+  setTimeout(() => { if (loader) loader.style.display = 'none'; }, 900);
+});
+
 const menuButton = document.querySelector('.menu-button');
 const navLinks = document.querySelector('.nav-links');
 const toTop = document.querySelector('.to-top');
@@ -6,8 +13,35 @@ const modal = document.querySelector('.command-modal');
 const closeCommand = document.querySelector('.close-command');
 const toast = document.querySelector('.toast');
 const soundButton = document.querySelector('.sound-button');
+const themeToggle = document.querySelector('.theme-toggle');
 let soundEnabled = false;
 
+// Theme toggle
+const savedTheme = localStorage.getItem('theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+if (themeToggle) themeToggle.textContent = savedTheme === 'dark' ? '◐' : '◑';
+
+themeToggle?.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  themeToggle.textContent = next === 'dark' ? '◐' : '◑';
+});
+
+// Fade-in on scroll (IntersectionObserver)
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// Click sound
 const clickSound = () => {
   if (!soundEnabled) return;
   const AudioContext = window.AudioContext || window.webkitAudioContext;
