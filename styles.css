@@ -567,3 +567,75 @@ mark {
   .blog-card { padding: 20px; border-radius: 22px; }
   .blog-card h3 { font-size: 20px; }
 }
+
+/* Typing cursor */
+.typing-cursor {
+  display: inline-block;
+  animation: blink 0.7s step-end infinite;
+  color: var(--accent);
+  font-weight: 700;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Skill bars */
+.skill-bars {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.skill-bar {
+  display: grid;
+  gap: 4px;
+}
+.skill-bar-label {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.skill-bar-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.skill-bar-fill.animated {
+  /* width set by JS via data-level */
+}
+
+/* GitHub contribution graph */
+.github-graph-card {
+  padding: 28px;
+  text-align: center;
+}
+.github-chart-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.github-graph-label {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 14px;
+}
+.github-graph-label a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+[data-theme="light"] .skill-bar-track {
+  background: rgba(0,0,0,.08);
+}

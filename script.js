@@ -29,6 +29,46 @@ themeToggle?.addEventListener('click', () => {
   themeToggle.textContent = next === 'dark' ? '◐' : '◑';
 });
 
+// Typing animation
+const typingPhrases = [
+  'Web3 Builder',
+  'AI Agent Architect',
+  'Security Researcher',
+  'Full-Stack Dev',
+];
+let phraseIdx = 0;
+let charIdx = 0;
+let isDeleting = false;
+const typingEl = document.getElementById('typing-text');
+
+function typeLoop() {
+  if (!typingEl) return;
+  const phrase = typingPhrases[phraseIdx];
+  if (isDeleting) {
+    typingEl.textContent = phrase.substring(0, charIdx - 1);
+    charIdx--;
+  } else {
+    typingEl.textContent = phrase.substring(0, charIdx + 1);
+    charIdx++;
+  }
+
+  let delay = isDeleting ? 40 : 80;
+
+  if (!isDeleting && charIdx === phrase.length) {
+    delay = 2000; // pause at end
+    isDeleting = true;
+  } else if (isDeleting && charIdx === 0) {
+    isDeleting = false;
+    phraseIdx = (phraseIdx + 1) % typingPhrases.length;
+    delay = 400;
+  }
+
+  setTimeout(typeLoop, delay);
+}
+
+// Start typing after loading screen
+setTimeout(typeLoop, 1200);
+
 // Fade-in on scroll (IntersectionObserver)
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -40,6 +80,46 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// Counter animation
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseInt(el.dataset.count, 10);
+    if (!target) return;
+    let current = 0;
+    const duration = 1500;
+    const step = Math.ceil(target / (duration / 16));
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = current + '+';
+    }, 16);
+    counterObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+// Skill bar animation
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    const fills = entry.target.querySelectorAll('.skill-bar-fill');
+    fills.forEach((fill, i) => {
+      setTimeout(() => {
+        fill.style.width = fill.dataset.level + '%';
+      }, i * 80);
+    });
+    skillObserver.unobserve(entry.target);
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.skills-grid').forEach(el => skillObserver.observe(el));
 
 // Click sound
 const clickSound = () => {
