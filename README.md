@@ -1,25 +1,44 @@
 # Khasbi Maulana — Web3 Portfolio
 
-Clean static portfolio for **Khasbi Maulana**, focused on React frontend work, Web3 projects, on-chain experience, and community contributions.
+Clean static portfolio for **Khasbi Maulana** — Web3 Builder, AI Agent Architect, and Security Researcher.
 
 **Live site:** https://www.khasbim.web.id/
 
 ## Overview
 
-This repo contains a lightweight HTML/CSS/JavaScript portfolio deployed on Vercel. It is intentionally simple: no framework, no build step, and no runtime dependencies.
+This repo contains a lightweight HTML/CSS/JavaScript portfolio deployed on Vercel. No framework, no build step, no runtime dependencies.
 
 ## Featured work
 
+**AI / Multi-Agent:**
+- **SPECTRE** — Multi-Agent Platform powered by MiMo 100T
+- **ChainSentinel** — AI-Powered Smart Contract Security Platform
+- **SYNAPSE** — 10-Agent Code Analysis Platform
+
+**Web3 DApps:**
 - **KindJar** — Celo / MiniPay donation dApp
-- **Base Streak Arena** — Base + Farcaster mini app experiment
-- **Ayshata Guard** — Web3 wallet-safety education and risk checker
-- **Crypto Price Tracker** — React + CoinGecko API market dashboard
+- **Base Streak Arena** — Base + Farcaster mini app
+- **QIE Pay** — QIE Blockchain Payment Gateway
+
+**Security:**
+- **DeepAudit Engine** — Enterprise security audit platform
+- **Sentinel AI** — Multi-chain threat intelligence
+
+**Mining:**
+- **Equium GPU Miner** — CUDA Equihash 96,5 on Solana
+- **Hash256 CLI** — Post-quantum token miner
+- **RPOW2 Miner** — Terminal auto-miner
+
+**Tools:**
+- **Ayshata Guard** — Web3 wallet-safety education
+- **Crypto Price Tracker** — React + CoinGecko API dashboard
 
 ## Tech stack
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
+- Python, TypeScript, Rust, Go, Solidity, CUDA
+- React, Next.js, Tailwind CSS
+- Web3 (EVM, Solana, Base, Celo, Farcaster)
+- AI/ML (Multi-Agent Systems, LLM Pipelines)
 - Vercel static hosting
 
 ## Project structure
@@ -40,17 +59,11 @@ This repo contains a lightweight HTML/CSS/JavaScript portfolio deployed on Verce
 
 ## Local preview
 
-Because this is a static site, you can preview it with any local web server:
-
 ```bash
 python3 -m http.server 4173
 ```
 
-Then open:
-
-```text
-http://localhost:4173
-```
+Then open: http://localhost:4173
 
 ## Deploy to Vercel
 
@@ -61,13 +74,11 @@ http://localhost:4173
 5. Deploy.
 6. Add the custom domain `khasbim.web.id` in Vercel Project Settings → Domains.
 
-## Repository settings suggestion
+## Repository settings
 
-Use these settings on GitHub:
-
-- **Description:** `Personal Web3 developer portfolio showcasing React projects, on-chain experience, and community contributions.`
+- **Description:** `Personal Web3 developer portfolio showcasing AI agents, smart contract security, mining tools, and onchain DApps.`
 - **Website:** `https://www.khasbim.web.id/`
-- **Topics:** `portfolio`, `web3`, `react`, `frontend`, `vercel`, `static-site`
+- **Topics:** `portfolio`, `web3`, `ai`, `security`, `react`, `python`, `rust`, `solidity`
 
 ## Notes
 
