@@ -305,13 +305,38 @@ mark {
   min-height: 142px;
   display: grid;
   place-items: center;
-  gap: 6px;
-  padding: 20px;
+  gap: 8px;
+  padding: 24px 20px;
   cursor: pointer;
-  transition: transform .18s, background .18s, border-color .18s;
+  transition: transform .22s, background .22s, border-color .22s, box-shadow .22s;
+  position: relative;
+  overflow: hidden;
 }
-.contact-card strong { font-family: var(--mono); font-size: 16px; text-transform: uppercase; color: #e0f2fe; }
-.contact-card span { color: var(--muted); font-size: 14px; }
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(56,189,248,.06), rgba(167,139,250,.06));
+  opacity: 0;
+  transition: opacity .22s;
+}
+.contact-card:hover::before {
+  opacity: 1;
+}
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--accent);
+  margin-bottom: 4px;
+  transition: transform .22s, color .22s;
+}
+.contact-card:hover .contact-icon {
+  transform: scale(1.15);
+  color: #7dd3fc;
+}
+.contact-card strong { font-family: var(--mono); font-size: 14px; text-transform: uppercase; color: #e0f2fe; letter-spacing: .06em; }
+.contact-card span { color: var(--muted); font-size: 13px; }
 .copy-email { appearance: none; }
 .status-line { margin-top: 38px; }
 .footer { display: flex; justify-content: space-between; gap: 20px; padding: 26px 0; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 12px; font-weight: 800; color: var(--muted); }
