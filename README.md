@@ -25,7 +25,7 @@ This repo contains a lightweight HTML/CSS/JavaScript portfolio deployed on Verce
 - **Sentinel AI** — Multi-chain threat intelligence
 
 **Mining:**
-- **Equium GPU Miner** — CUDA Equihash 96,5 on Solana
+- **QIEPay** — Decentralized Payment Gateway on QIE Blockchain
 - **Hash256 CLI** — Post-quantum token miner
 - **RPOW2 Miner** — Terminal auto-miner
 
