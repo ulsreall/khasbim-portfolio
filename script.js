@@ -21,12 +21,23 @@ const savedTheme = localStorage.getItem('theme') || 'dark';
 document.documentElement.setAttribute('data-theme', savedTheme);
 if (themeToggle) themeToggle.textContent = savedTheme === 'dark' ? '◐' : '◑';
 
+const graphDark = 'https://activity-graph.vercel.app/graph?username=ulsreall&bg_color=0d1117&color=58a6ff&line=58a6ff&point=ffffff&area=true&area_color=58a6ff&hide_border=true';
+const graphLight = 'https://activity-graph.vercel.app/graph?username=ulsreall&bg_color=ffffff&color=0969da&line=0969da&point=1f2328&area=true&area_color=0969da&hide_border=true';
+
+function updateGraph(theme) {
+  const img = document.getElementById('github-graph');
+  if (img) img.src = theme === 'dark' ? graphDark : graphLight;
+}
+
+updateGraph(savedTheme);
+
 themeToggle?.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme');
   const next = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
   localStorage.setItem('theme', next);
   themeToggle.textContent = next === 'dark' ? '◐' : '◑';
+  updateGraph(next);
 });
 
 // Typing animation

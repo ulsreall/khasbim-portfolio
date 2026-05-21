@@ -18,16 +18,11 @@ This repo contains a lightweight HTML/CSS/JavaScript portfolio deployed on Verce
 **Web3 DApps:**
 - **KindJar** — Celo / MiniPay donation dApp
 - **Base Streak Arena** — Base + Farcaster mini app
-- **QIE Pay** — QIE Blockchain Payment Gateway
+- **QIEPay** — QIE Blockchain Payment Gateway
 
 **Security:**
 - **DeepAudit Engine** — Enterprise security audit platform
 - **Sentinel AI** — Multi-chain threat intelligence
-
-**Mining:**
-- **QIEPay** — Decentralized Payment Gateway on QIE Blockchain
-- **Hash256 CLI** — Post-quantum token miner
-- **RPOW2 Miner** — Terminal auto-miner
 
 **Tools:**
 - **Ayshata Guard** — Web3 wallet-safety education
@@ -47,13 +42,23 @@ This repo contains a lightweight HTML/CSS/JavaScript portfolio deployed on Verce
 .
 ├── assets/
 │   ├── CV_Khasbi_Maulana.pdf
-│   └── profile.png
+│   ├── profile.webp
+│   └── projects/
+│       ├── spectre.webp
+│       ├── chainsentinel.webp
+│       ├── kindjar-celo.webp
+│       ├── qiepay.webp
+│       ├── base-streak-arena.webp
+│       └── ayshata-guard.webp
+├── 404.html
 ├── index.html
 ├── script.js
 ├── styles.css
 ├── vercel.json
 ├── robots.txt
 ├── sitemap.xml
+├── favicon.svg
+├── og-image.svg
 └── README.md
 ```
 
@@ -76,12 +81,13 @@ Then open: http://localhost:4173
 
 ## Repository settings
 
-- **Description:** `Personal Web3 developer portfolio showcasing AI agents, smart contract security, mining tools, and onchain DApps.`
+- **Description:** `Personal Web3 developer portfolio showcasing AI agents, smart contract security, and onchain DApps.`
 - **Website:** `https://www.khasbim.web.id/`
 - **Topics:** `portfolio`, `web3`, `ai`, `security`, `react`, `python`, `rust`, `solidity`
 
 ## Notes
 
 - No API keys or private credentials are required.
+- All images are optimized WebP format.
 - Keep assets optimized before uploading new images or PDFs.
 - If project cards are changed, update the project count and sitemap/metadata when needed.
